@@ -339,14 +339,15 @@ robot-basic-offset defines the amount of spaces that are inserted when indenting
 						      )
        )
 
+  (setq indent-line-function 'insert-tab)
 
-  (define-key robot-mode-map (kbd "TAB") 'robot-mode-indent)
-  (define-key robot-mode-map (kbd "RET") 'robot-mode-newline)
+  ;; (define-key robot-mode-map (kbd "TAB") 'robot-mode-indent)
+  ;; (define-key robot-mode-map (kbd "RET") 'robot-mode-newline)
   (define-key robot-mode-map [remap find-tag] 'robot-mode-find-kw)
   (define-key robot-mode-map [remap complete-symbol] 'robot-mode-complete)
-  (define-key robot-mode-map [remap indent-region] 'robot-mode-indent-region)
+  ;; (define-key robot-mode-map [remap indent-region] 'robot-mode-indent-region)
   )
-   
+
 (add-to-list 'auto-mode-alist '("\\.robot\\'" . robot-mode))
 
 (provide 'robot-mode)
